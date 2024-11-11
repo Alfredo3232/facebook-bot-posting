@@ -1,6 +1,15 @@
 {
-	"dependencies": {
-		"cheerio": "^1.0.0",
-		"puppeteer": "^23.7.1"
-	}
+  "name": "airBnb-scraping",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "puppeteer": "^23.7.1"
+  }
 }
