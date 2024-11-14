@@ -1,12 +1,14 @@
 import globals from "globals";
 import pluginJs from "@eslint/js";
 
+/** @type {import('eslint').Linter.Config[]} */
 export default [
     {
         languageOptions: {
-            globals     : globals.browser,
-            ecmaVersion : 2022,
-            sourceType  : "module"
+            globals: {
+                ...globals.browser,
+                ...globals.node
+            }
         },
         rules: {
             "arrow-body-style" : ["error", "as-needed"],
@@ -55,9 +57,9 @@ export default [
                     functions : "never"
                 }
             ],
-            semi                          : ["error", "always"],
-            eqeqeq                        : ["error", "smart"],
-            "no-else-return"              : "error"
+            semi             : ["error", "always"],
+            eqeqeq           : ["error", "smart"],
+            "no-else-return" : "error"
         }
     },
     pluginJs.configs.recommended
