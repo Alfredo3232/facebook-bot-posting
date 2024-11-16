@@ -39,7 +39,7 @@ puppeteer.use(
         await page
             .locator('[data-testid="signup-login-submit-btn"]')
             .click();
-    }, Math.floor(Math.random() * 15000));
+    }, Math.floor(Math.random() * 10000));
 
     // fill out password
     await page

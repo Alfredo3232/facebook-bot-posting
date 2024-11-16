@@ -8,7 +8,8 @@ export default [
             globals: {
                 ...globals.browser,
                 ...globals.node
-            }
+            },
+            sourceType: "module"
         },
         rules: {
             "arrow-body-style" : ["error", "as-needed"],
