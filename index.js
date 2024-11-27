@@ -25,29 +25,13 @@ puppeteer.use(
         waitUntil: "networkidle0"
     });
 
-    // // Click email button
-    // await page.waitForSelector('[data-testid="social-auth-button-email"]', {
-    //     timeout: 5000
-    // });
-    // await page.click('[data-testid="social-auth-button-email"]');
+    // Fill out email
+    await page.locator("#email").fill(process.env.email);
 
-    // // Fill out email
-    // setTimeout(async () => {
-    //     await page
-    //         .locator("._1gj8ihx")
-    //         .fill(process.env.email);
-    //     await page
-    //         .locator('[data-testid="signup-login-submit-btn"]')
-    //         .click();
-    // }, Math.floor(Math.random() * 10000));
+    // fill out password
+    await page.locator("#pass").fill(process.env.password);
 
-    // // fill out password
-    // await page
-    //     .locator('[data-testid="email-signup-password"]')
-    //     .fill(process.env.password);
-    // await page
-    //     .locator('[data-testid="signup-login-submit-btn"]')
-    //     .click();
+    await page.locator("#loginbutton").click();
 
     // // Step 5: Take a screenshot and save it <-
     await page.screenshot({ path: "example.png" });
