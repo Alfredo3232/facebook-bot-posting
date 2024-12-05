@@ -31,7 +31,7 @@ puppeteer.use(
     // fill out password
     await page.locator("#pass").fill(process.env.password);
 
-    await page.locator("#loginbutton").click();
+    await page.locator('[data-testid="royal_login_button"]').click();
 
     // // Step 5: Take a screenshot and save it <-
     await page.screenshot({ path: "example.png" });
